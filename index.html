@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     *,
     ::before,
@@ -16,23 +17,32 @@
       border-style: solid;
       border-color: #e5e7eb;
     }
+
     html {
       line-height: 1.5;
-      -webkit-text-size-adjust: 100%;
-      tab-size: 4;
-      font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif;
     }
+
     body {
       margin: 0;
-      line-height: inherit;
       background-color: #0a0a0a;
       color: #ffffff;
       min-height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column; /* добавлено для размещения сверху */
       align-items: center;
       padding: 2rem;
     }
+
+    /* Стиль заголовка */
+    .top-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #ffffff;
+    }
+
     .main-container {
         display: flex;
         flex-wrap: wrap;
@@ -41,6 +51,7 @@
         width: 100%;
         max-width: 1100px;
     }
+
     .profile-card {
       background-color: #0d0d0d;
       border: 1px solid #1e1e1e;
@@ -53,13 +64,17 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 0 30px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04),
+                  0 0 30px rgba(0, 0, 0, 0.2);
+      transition: 0.3s ease;
     }
+
     .profile-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 10px 40px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08),
+                  0 10px 40px rgba(0, 0, 0, 0.3);
     }
+
     .profile-card .avatar {
       width: 120px;
       height: 120px;
@@ -68,57 +83,63 @@
       object-fit: cover;
       border: 2px solid #2e2e2e;
     }
+
     .profile-card .name {
       font-size: 1.7rem;
       font-weight: bold;
       margin-bottom: 0.5rem;
       color: white;
     }
+
     .profile-card .description {
       font-size: 1rem;
       color: #a0a0a0;
       margin-bottom: 1.5rem;
       min-height: 48px;
     }
+
     .contacts {
       overflow: hidden;
       max-height: 0;
       opacity: 0;
-      transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+      transition: 0.5s ease;
       list-style: none;
       padding: 0;
       margin: 0;
       width: 100%;
     }
+
     .profile-card:hover .contacts {
       max-height: 250px;
       opacity: 1;
       margin-top: 1rem;
     }
+
     .contacts li {
       color: #cfcfcf;
       margin-bottom: 0.75rem;
       font-size: 0.95rem;
     }
+
     .contacts li strong {
-        font-weight: 600;
-        color: #ffffff;
+      font-weight: 600;
+      color: #ffffff;
     }
+
     @media (max-width: 768px) {
-        body {
-            align-items: flex-start;
-            padding-top: 4rem;
-        }
-        .main-container {
-            flex-direction: column;
-            align-items: center;
-        }
+      .main-container {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="main-container">
+  <div class="top-title">discord.gg/confach</div>
+
+ <div class="main-container">
+   
     <div class="profile-card">
       <img src="https://cdn.discordapp.com/attachments/1440085596386234398/1440085725369335869/cc8c0f94e84b27a5ef70984661ba.jpg?ex=691cdfd8&is=691b8e58&hm=f63050053c48776d44a7d15994d584e80e791975b0a9422b950442c93bcfc283&" alt="Аватар Zdead" class="avatar">
       <h2 class="name">Zdead</h2>
